@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("les.jpg");
+    background-size: cover;
+}
+form{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    font-family: 'Bangers', cursive;
+    background-image: url("fon.jpg");
+    background-size: cover;
+    width: 80%;
+    max-width: 800px;
+    margin-top: 100px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 200px black;
+}
+#header{
+    position: relative;
+    text-shadow: 0 10px 20px rgba(255, 166, 0, 0.679);
+    display: inline-block;
+    font-size: 60px;
+    transform: translateY(-50%);
+    background: linear-gradient(90deg, rgba(255, 42, 114, 1) 0%, rgba(170, 104, 255, 1) 50%, rgba(255, 129, 45, 1) 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    transition: 0.9s;
+    background-clip: text;
+    color: rgba(0, 255, 255, 0);
+    -webkit-text-stroke: 1px rgba(163, 15, 208, 0.637);
+    font-weight: normal;
+    padding: 0 15px;
+    z-index: 110;
+}
+#header:hover{
+    background-position: right;
+}
+.gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-radius: 15px;
+    background: linear-gradient(90deg, rgba(78,255,0,0.5858718487394958) 0%, rgba(255,255,255,0) 50%, rgba(255,45,45,0.5970763305322129) 100%);
+    background-size: 1000%;
+    background-position: center;
+}
+.hands img{
+    position: relative;
+    margin-left: 10%;
+    margin-right: 10%;
+    z-index: 10;
+    opacity: 0;
+}
+.schetchik{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(169, 0, 253);
+    -webkit-text-stroke: 2px rgb(230, 141, 156);
+    font-weight: normal;
+    font-size: 100px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.schetchikVisible{
+    animation: schetchik 1s 3;
+    
+}
+.handsActive img,
+.scoreActive{
+    opacity: 1 !important;
+    transition: 0.5s;
+}
+@keyframes schetchik {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(5);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+.score{
+    position: relative;
+    display: inline-block;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    font-size: 30px;
+    color: white;
+    z-index: 10;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    width: 30%;
+    opacity: 0;
+}
+.vibor-ruk{
+    margin: 5px;
+}
+.vibor-ruk img:hover{
+    border: 5px solid rgba(255, 255, 255, 0.459);
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.459);
+}
+.vibor{
+    background-color: blueviolet;
+    border-radius: 100px;
+    margin-right: 20px;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    margin-left: 20px;
+    transform: translateY(50%);
+    border: 5px solid rgba(245, 222, 179, 0);
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 1;
+}
+.viborBlocked{
+    pointer-events: none;
+}
