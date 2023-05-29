@@ -127,12 +127,8 @@ class App extends React.Component {
         else if (state.schetchik == 0) {
           clearInterval(schetchikInterval)
         }
-        if(state.playerScore == 5) {
-          playerScore = 0;
-        }
-        else if(state.botScore == 5) {
-          botScore = 0;
-        }
+        if(state.playerScore == 5 || state.botScore == 5) {playerScore = 0;botScore = 0;}
+           
         return {
           score: score,
           // Отнимает по одному когда вбрал что то из кружочков
